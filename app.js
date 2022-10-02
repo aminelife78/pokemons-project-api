@@ -5,13 +5,12 @@ const routerPokemons = require("./src/routes/pokemons.routes")
 const routerLogin = require("./src/routes/login.routes")
 const path = require("path")
 const bodyParser = require("body-parser")
-const morgan = require("morgan")
 const {initDb,Pokemon} = require("./src/db/sequelize")
 const favicon = require('serve-favicon')
 
 
 
-app.use(favicon(path.join(__dirname,'favicon.ico'))).use(morgan("dev"))
+app.use(favicon(path.join(__dirname,'favicon.ico')))
 
 app.use(bodyParser.urlencoded({ extended: true }))
 app.use(bodyParser.json())
