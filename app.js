@@ -8,11 +8,11 @@ const bodyParser = require("body-parser")
 //utilisation juste pour le mode developpememnt
 // const morgan = require("morgan")
 const {initDb,Pokemon} = require("./src/db/sequelize")
-const favicon = require('serve-favicon')
+// const favicon = require('serve-favicon')
 
 
 
-app.use(favicon(path.join(__dirname,'favicon.ico')))
+// app.use(favicon(path.join(__dirname,'favicon.ico')))
 
 //utilisation de morgane juste pour le mode developpememnt
 // app.use(morgan("dev"))

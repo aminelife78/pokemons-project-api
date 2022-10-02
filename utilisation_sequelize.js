@@ -60,6 +60,9 @@ return sequelize.define("user", {
     "start": "NODE_ENV=production node app.js",
     "dev": "NODE_ENV=developement nodemon app.js"
   },
-9)ne pas utilisé les dependences de developpepent
+9)ne pas utilisé les dependences de developpepent comme morgan et nodemon
+10) sauvgarder le projet sur git si vous avez pas fais ou prealable
+11) faire la commande heroku create pour ajouter le projet a heroku
+12)deplyer notre api rest sur heroku deployement
 
 */
