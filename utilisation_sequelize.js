@@ -63,6 +63,6 @@ return sequelize.define("user", {
 9)ne pas utilisé les dependences de developpepent comme morgan et nodemon
 10) sauvgarder le projet sur git si vous avez pas fais ou prealable
 11) faire la commande heroku create pour ajouter le projet a heroku
-12)deplyer notre api rest sur heroku deployement
+12)deplyer notre api rest sur heroku deployement git push heroku master
 
 */
