@@ -1,6 +1,5 @@
 const express = require("express")
 const app = express()
-const path = require("path")
 const port = process.env.PORT || 3000
 const routerPokemons = require("./src/routes/pokemons.routes")
 const routerLogin = require("./src/routes/login.routes")
@@ -23,7 +22,14 @@ initDb()
 
 // ici nous plaçons nos future points de terminaison
 
+app.get((req,res)=>{
+  res.json("hello, Heroku !")
+})
 
+app.get("/",(req,res)=>{
+  res.status(202)
+  res.redirect("/pokemons")
+})
 app.use("/api", routerPokemons)
 app.use("/api", routerLogin)
 app.use((req,res)=>{
