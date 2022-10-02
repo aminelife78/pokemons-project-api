@@ -1,19 +1,17 @@
 const express = require("express")
 const app = express()
-const path = require("path")
 const port = process.env.PORT || 3000
 const routerPokemons = require("./src/routes/pokemons.routes")
 const routerLogin = require("./src/routes/login.routes")
 const path = require("path")
 const bodyParser = require("body-parser")
-//utilisation juste pour le mode developpememnt
-// const morgan = require("morgan")
+const morgan = require("morgan")
 const {initDb,Pokemon} = require("./src/db/sequelize")
+const favicon = require('serve-favicon')
 
 
 
-//utilisation de morgane juste pour le mode developpememnt
-// app.use(morgan("dev"))
+app.use(favicon(path.join(__dirname,'favicon.ico'))).use(morgan("dev"))
 
 app.use(bodyParser.urlencoded({ extended: true }))
 app.use(bodyParser.json())
@@ -22,10 +20,6 @@ app.use(bodyParser.json())
 initDb()
 
 // ici nous plaçons nos future points de terminaison
-
-app.get((req,res)=>{
-  res.json("hello, Heroku !")
-})
 
 app.get("/",(req,res)=>{
   res.status(202)
