@@ -23,14 +23,7 @@ initDb()
 
 // ici nous plaçons nos future points de terminaison
 
-app.get((req,res)=>{
-  res.json("hello, Heroku !")
-})
 
-app.get("/",(req,res)=>{
-  res.status(202)
-  res.redirect("/pokemons")
-})
 app.use("/api", routerPokemons)
 app.use("/api", routerLogin)
 app.use((req,res)=>{
