@@ -4,6 +4,7 @@ const routerPokemons = require("./src/routes/pokemons.routes")
 const routerLogin = require("./src/routes/login.routes")
 const path = require("path")
 const bodyParser = require("body-parser")
+const cors = require("cors")
 const app = express()
 const port = process.env.PORT || 3000
 const {initDb,Pokemon} = require("./src/db/sequelize")
@@ -15,6 +16,8 @@ app.use(favicon(__dirname + '/favicon.ico'))
 
 app.use(bodyParser.urlencoded({ extended: true }))
 app.use(bodyParser.json())
+
+app.use(cors())
 
 
 initDb()
