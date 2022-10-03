@@ -7,6 +7,7 @@ const bcrypt = require("bcrypt")
 const sequelize = new Sequelize('pokedex', 'root', '', {
   host: 'localhost',
   dialect: 'mariadb',
+  port:3000,
   dialectOptions: {
     timezone: 'Etc/GMT-2',
   },
