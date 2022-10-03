@@ -10,7 +10,7 @@ const sequelize = new Sequelize('pokedex', 'root', '', {
   dialectOptions: {
     timezone: 'Etc/GMT-2',
   },
-  logging: false
+  logging: true
 })
   
 const Pokemon = PokemonModel(sequelize, DataTypes)
