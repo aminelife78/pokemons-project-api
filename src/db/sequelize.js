@@ -10,12 +10,18 @@ if(process.env.NODE_ENV === 'production') {
   sequelize = new Sequelize('ik4augtllg7ydffy', 'dh12xaj1uzlk95jc', 'wqzhm4xwgqlbe8j7', {
     host: 'iu51mf0q32fkhfpl.cbetxkdyhwsb.us-east-1.rds.amazonaws.com',
     dialect: 'mariadb',
+    dialectOptions: {
+      timezone: 'Etc/GMT-2',
+    },
     logging: true
   })
 } else {
   sequelize = new Sequelize('pokedex', 'root', '', {
     host: 'localhost',
     dialect: 'mariadb',
+    dialectOptions: {
+      timezone: 'Etc/GMT-2',
+    },
     logging: false
   })
   

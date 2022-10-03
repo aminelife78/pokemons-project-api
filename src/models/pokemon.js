@@ -1,5 +1,3 @@
-let valideType = ["eau","feu","normale","plante"] 
-
 module.exports = (sequelize, DataTypes) => {
   return sequelize.define('Pokemon', {
     id: {
