@@ -8,7 +8,7 @@ module.exports = (sequelize, DataTypes) => {
     name: {
       type: DataTypes.STRING,
       allowNull: false,
-      unique:{msg:"Le nom est deja prise"},
+      unique:{msg:"Le nom est deja pris"},
       validate:{
         notNull:{msg:"le nom sont une propriété requise"},
         notEmpty:{msg:"le nom ne peut pas etre vide"},

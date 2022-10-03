@@ -36,15 +36,7 @@ const User = usersModel(sequelize,DataTypes)
 const initDb = () => {
   return sequelize.sync().then(_ => {
     // ajouter les pokemones de fichier mock-pokemon a la base de données
-    pokemons.map(pokemon => {
-      Pokemon.create({
-        name: pokemon.name,
-        hp: pokemon.hp,
-        cp: pokemon.cp,
-        picture: pokemon.picture,
-        types: pokemon.types
-      }).then(pokemon => console.log(pokemon.toJSON()))
-    })
+   
 
     // ajouter username et password a la base donnée avec l'ecryptage de mot de passe avec le module bcryt
     bcrypt.hash("amine",10)
