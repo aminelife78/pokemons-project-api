@@ -39,13 +39,7 @@ const initDb = () => {
    
 
     // ajouter username et password a la base donnée avec l'ecryptage de mot de passe avec le module bcryt
-    bcrypt.hash("amine",10)
-    .then(hash=>{
-      User.create({
-      username:"amine",
-      password:hash,
-    }).then(user=>console.log(user))
-    })
+  
     
      
     console.log('La base de donnée a bien été initialisée !')
